@@ -295,8 +295,12 @@ body {
 	margin-bottom: 20px;
 	width: 500px;
 }
+.block-2__statement{
+	user-select: none;
+}
 .joke-hidden {
 	display: none;
+	
 }
 
 
