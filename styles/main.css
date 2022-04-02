@@ -144,6 +144,8 @@ body {
 	justify-content: space-around;
 }
 .block-1__frame-1 {
+	margin-right: 20px;
+	margin-bottom: 30px;
 	border:  black 10px solid;
 	box-shadow: black -2px 2px 5px 0px;
 	transform: rotate(15deg);
@@ -173,6 +175,7 @@ body {
 	color: white;
 	background: black;
 	width: 500px;
+	user-select: none;
 	border-left: gray 2px solid;
 	border-right: gray 2px solid;
 	border-bottom: gray 2px solid;
@@ -265,6 +268,8 @@ body {
 	display: flex;
 }
 .who-i-am__biography {
+	font-size: 20px;
+	font-family: 'Oswald', sans-serif;
 	padding: 10px;
 }
 /* end of who-i-am  styles */
@@ -280,7 +285,7 @@ body {
 }
 .block-2__sub-title {
 	margin-bottom: 15px;
-	font-family: 'Lucida Console', arial;
+	font-family: 'Josefin Sans', sans-serif;
 	font-size: 15px;
 	color: gray;
 	display: flex;
@@ -290,6 +295,7 @@ body {
 	text-transform: uppercase;
 }
 .block-2__statements {
+	font-family: 'Oswald', sans-serif;
 	position: relative;
 	margin: auto;
 	margin-bottom: 20px;
@@ -300,7 +306,7 @@ body {
 }
 .joke-hidden {
 	display: none;
-	
+
 }
 
 
@@ -320,9 +326,103 @@ body {
 }
 /* end of contacts styles */
 
+/* start of block-3 styles */
+
+.block-3{
+	margin-bottom: 10px;
+	overflow: hidden;
+	height: 300px;
+
+}
+.bulb-block {
+	font-family: 'Lucida Console', arial;
+	position: relative;
+	width: 200px;
+	z-index: 3;
+	height: 200px;
+	margin: auto;
+}
+.bulb-block > img:nth-child(1){
+	filter: invert(50%);
+	transform: scale(1)rotate(180deg) scale(0.99);
+}
+.bulb-block  img {
+	width: 200px;
+	transform:rotate(180deg);
+	position: absolute;
+}
+.bulb-on {
+	transition: 1s;
+	width: 200px;
+	height: 200px;
+	opacity: 0;
+}
+.bulb-is-off {
+	animation: bulb-blink infinite 3s linear;
+}
+.bulb-light {
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.1) 77%, rgba(54,2,2,0)95%);
+}
+
+.bulb-is-off .bulb-light {
+	width: 10px;
+	height: 10px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+}
+.bulb-is-on {
+	opacity: 0;
+	animation: bulb-on 7s linear
+}
+.bulb-is-on .bulb-light {
+	width: 300px;
+	height: 300px;
+	top: 85%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+}
+.bulb-block__text {
+	z-index: 4;
+	position: relative;
+	text-align: center;
+	color: black;
+}
+.bulb-block__text-white{
+	color: white;
+}
+.bulb-block__text-black{
+	color: black;
+}
+@keyframes bulb-on {
+	0%{
+		opacity: 0;
+	}
+	20%{
+		opacity: 100%;
+	}
+}
+@keyframes bulb-blink{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0.15;
+	}
+	60%{
+		opacity: 0.1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+/* end of block-3 styles */
 /* adaptive */
 
-@media (max-width: 400px){
+@media (max-width: 420px){
 	.block-1__frame-1{
 		margin-bottom: 50px;
 	}
