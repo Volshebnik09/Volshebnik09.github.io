@@ -406,7 +406,7 @@ body {
 .my-sites__card[active] {
 	z-index: 9000;
 	transition: box-shadow 0.7s;
-	box-shadow: 0px 0px 20px 4000px rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 20px 2000px rgba(0,0,0,0.8);
 }
 .my-sites__card[active] .my-sites__card__img{
 	transform: translate(0%,-93%) scale(0.8);
