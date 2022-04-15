@@ -1,0 +1,389 @@
+/* oswald-200 - latin_cyrillic */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/oswald-v36-latin_cyrillic-200.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/oswald-v36-latin_cyrillic-200.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-v36-latin_cyrillic-200.woff2") format("woff2"), url("../fonts/oswald-v36-latin_cyrillic-200.woff") format("woff"), url("../fonts/oswald-v36-latin_cyrillic-200.ttf") format("truetype"), url("../fonts/oswald-v36-latin_cyrillic-200.svg#Oswald") format("svg");
+  /* Legacy iOS */
+}
+/* oswald-300 - latin_cyrillic */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/oswald-v36-latin_cyrillic-300.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/oswald-v36-latin_cyrillic-300.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-v36-latin_cyrillic-300.woff2") format("woff2"), url("../fonts/oswald-v36-latin_cyrillic-300.woff") format("woff"), url("../fonts/oswald-v36-latin_cyrillic-300.ttf") format("truetype"), url("../fonts/oswald-v36-latin_cyrillic-300.svg#Oswald") format("svg");
+  /* Legacy iOS */
+}
+/* oswald-regular - latin_cyrillic */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswald-v36-latin_cyrillic-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/oswald-v36-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-v36-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/oswald-v36-latin_cyrillic-regular.woff") format("woff"), url("../fonts/oswald-v36-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/oswald-v36-latin_cyrillic-regular.svg#Oswald") format("svg");
+  /* Legacy iOS */
+}
+/* oswald-500 - latin_cyrillic */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/oswald-v36-latin_cyrillic-500.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/oswald-v36-latin_cyrillic-500.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-v36-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/oswald-v36-latin_cyrillic-500.woff") format("woff"), url("../fonts/oswald-v36-latin_cyrillic-500.ttf") format("truetype"), url("../fonts/oswald-v36-latin_cyrillic-500.svg#Oswald") format("svg");
+  /* Legacy iOS */
+}
+/* oswald-600 - latin_cyrillic */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/oswald-v36-latin_cyrillic-600.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/oswald-v36-latin_cyrillic-600.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-v36-latin_cyrillic-600.woff2") format("woff2"), url("../fonts/oswald-v36-latin_cyrillic-600.woff") format("woff"), url("../fonts/oswald-v36-latin_cyrillic-600.ttf") format("truetype"), url("../fonts/oswald-v36-latin_cyrillic-600.svg#Oswald") format("svg");
+  /* Legacy iOS */
+}
+/* oswald-700 - latin_cyrillic */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/oswald-v36-latin_cyrillic-700.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/oswald-v36-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-v36-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/oswald-v36-latin_cyrillic-700.woff") format("woff"), url("../fonts/oswald-v36-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/oswald-v36-latin_cyrillic-700.svg#Oswald") format("svg");
+  /* Legacy iOS */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background: black;
+  min-height: 120vh;
+  cursor: default;
+}
+
+.cube {
+  transition: 0.06s all cubic-bezier(1, 1, 0, 0.01);
+}
+.cube .cube-side {
+  backface-visibility: hidden;
+  color: white;
+  border: 3px solid white;
+  text-align: center;
+  line-height: 100px;
+  font-size: 30px;
+  background: black;
+  display: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+.cube .cube-side img {
+  height: inherit;
+  width: inherit;
+}
+.cube .cube-side::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.4);
+  filter: blur(10px);
+  z-index: -100;
+}
+
+.intro {
+  font-family: "Oswald";
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: white;
+}
+.intro h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  animation: textFade 1.5s;
+  font-size: 40px;
+  user-select: none;
+}
+.intro #cube_tip {
+  position: absolute;
+  user-select: none;
+  left: 50%;
+  top: 37%;
+  animation: textFade 1.5s;
+  transform: translateY(-50%) translateX(-50%);
+  color: rgba(255, 255, 255, 0.534);
+}
+
+main {
+  font-family: "Oswald";
+  position: relative;
+}
+main .line {
+  width: 110%;
+  margin-left: -5px;
+  height: 6px;
+  background: black;
+  margin-top: -5px;
+  box-shadow: rgba(0, 0, 0, 0.529) 0px 2px 5px;
+}
+main::before {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/bg.jpg");
+  background-size: 250px 100px;
+  animation: bgAnim 50s linear infinite;
+  z-index: -100;
+  content: "";
+}
+main h2 {
+  display: block;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  text-shadow: rgba(0, 0, 0, 0.529) 2px 2px 5px;
+}
+main .wrapper {
+  background: white;
+  box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.4);
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+}
+main .about {
+  padding-top: 30px;
+  overflow: hidden;
+  position: relative;
+}
+main .about .content {
+  padding: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+main .about .content .avatar {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 5px solid black;
+  box-shadow: rgba(0, 0, 0, 0.329) 2px 2px 2px;
+  border-radius: 50%;
+  margin: 10px;
+  overflow: hidden;
+  background: black;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+@media (max-width: 600px) {
+  main .about .content .avatar {
+    margin: auto;
+    margin-top: 10px;
+  }
+}
+main .about .content .text-container {
+  position: relative;
+}
+@media (max-width: 600px) {
+  main .about .content .text-container {
+    margin: auto;
+    margin-top: 10px;
+  }
+}
+main .about .content .text-container h3 {
+  display: block;
+  margin-top: 40px;
+}
+main .about .content .text-container h4 {
+  margin-top: 10px;
+}
+main .about .content .text-container ul {
+  margin-top: 10px;
+  list-style: none;
+}
+main .about .content .text-container ul li + li {
+  margin-top: 10px;
+}
+main .about .content .text-container ul li {
+  position: relative;
+  padding-left: 10px;
+  z-index: 100;
+}
+main .about .content .text-container ul li::before {
+  transition: 0.8s;
+  position: absolute;
+  left: 0;
+  content: "";
+  height: 100%;
+  width: 4px;
+  background: black;
+  z-index: -100;
+}
+main .about .content .text-container ul .orange-secret:hover::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: orange;
+}
+main .about .content .linksAndStack {
+  margin: auto;
+  margin-top: 0;
+  max-width: 400px;
+}
+main .about .content .links h3 {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  margin-top: 40px;
+}
+main .about .content .links .links-flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  position: relative;
+}
+main .about .content .links .links-flex img {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  transition: 0.2s;
+}
+main .about .content .links .links-flex .popup {
+  position: absolute;
+  top: 0px;
+  line-height: 36px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  height: 0px;
+  background: white;
+  border-radius: 20px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+main .about .content .links .links-flex a {
+  position: relative;
+}
+main .about .content .links .links-flex .link:hover img {
+  transform: scale(1.1);
+}
+main .about .content .links .links-flex .link:hover .popup {
+  border: 2px gray solid;
+  transform: translateY(-40px);
+  height: 40px;
+}
+main .about .content h3 {
+  text-align: center;
+}
+main .about .content .stack {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .about .content .stack img {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+main .strengths {
+  max-height: 290px;
+  overflow: hidden;
+}
+main .strengths .slider {
+  margin: 20px 0;
+}
+main .strengths .slider .slide {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  box-shadow: rgba(0, 0, 0, 0.829) 2px 2px 5px;
+  border-radius: 2px;
+  background: #f5de1966;
+  overflow: hidden;
+}
+main .strengths .slider .slide h3 {
+  margin-top: 10px;
+  text-align: center;
+  position: relative;
+  z-index: 1000;
+}
+main .strengths .slider .slide img {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+main .strengths .slider .slide .popup {
+  position: absolute;
+  bottom: 0;
+  transition: 0.7s;
+  height: 0;
+  width: 100%;
+  background: #979797ea;
+}
+main .strengths .slider .slide .popup span {
+  display: block;
+  margin: 50px 10px 0;
+}
+main .strengths .slider .slide:hover .popup {
+  height: 100%;
+}
+
+footer {
+  height: 100px;
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+}
+footer .secretbtn {
+  position: absolute;
+  font-family: "Oswald";
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+footer .secretbtn .secretbtn-popup {
+  position: absolute;
+  width: 120px;
+  top: -30px;
+  transform: translateX(-12%);
+  display: none;
+}
+
+@keyframes textFade {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bgAnim {
+  100% {
+    background-position: 250px 100px;
+  }
+}
