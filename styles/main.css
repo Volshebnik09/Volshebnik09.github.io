@@ -10,12 +10,15 @@
 }
 html {
 scroll-behavior: smooth;
+
 }
 a {
 	text-decoration: none;
+	cursor: url('../cursors/Groovy/basic/dark/hand.cur'), pointer;
 	color: white;
 }
 body {
+	cursor: url('../cursors/Groovy/basic/dark/arrow.cur'), pointer;
 	background: black;
 }
 .fix-img {
@@ -93,7 +96,6 @@ body {
 }
 .prescreen__pull-down {
 	position: absolute;
-	cursor: pointer;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -327,33 +329,7 @@ body {
 /* end of contacts styles */
 
 /* start of block-3 styles */
-.my-sites__card__popup__content {
-	position: relative;
-	padding: 5px;
-	z-index: 5;
-	font-family: 'Lucida Console', arial;
-}
-.my-sites__card__popup {
-	position: absolute;
-	transform: translate(0px,150%);
-	transition: .3s;
-	top: -80px;
-	width: 100%;
-	height: 60px;
-	background: #cdcdcd;
-	z-index: 1;
-	border-radius: 15px;
-	box-shadow: 0 0 50px 0 rgb(255,255,255,0);
-}
-.my-sites__card__popup:after {
-	position: absolute;
-	content: '';
-	bottom: -12px;
-	left: 15px;
-	border-top:  12px solid #cdcdcd;
-	border-right:  9px solid transparent;
-	border-left:  9px solid transparent;
-}
+
 .my-sites__title{
 	color: white;
 	font-family: 'Anybody', cursive;
@@ -373,7 +349,7 @@ body {
 	z-index: 100;
 	margin: 30px;
 	width: 250px;
-	height: 300px;
+	height: 300px;	
 
 	background: black;
 	transition: .3s;
@@ -381,9 +357,11 @@ body {
 }
 .my-sites__card__img{
 	position: relative;
+	box-shadow: 2px 2px 20px 0px rgba(0,0,0,0);
 	z-index: 2;
 	width: 100%;
 	height: 100%;
+	transition: 0.5s;
 	overflow: hidden;
 }
 .my-sites__card__img img {
@@ -392,9 +370,44 @@ body {
 .my-sites__card:hover {
 	box-shadow:0px 0px 100px 2px rgba(255,255,255,0.14);
 }
-.my-sites__card:hover .my-sites__card__popup{
-	box-shadow: 0 0 50px 0 rgb(255,255,255,0.1);
-	transform: translate(0px,-11px);
+.my-sites__card__back{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	background: rgba(1, 1, 1, 1.0);
+	display: flex;
+	flex-direction: column;
+	background: -webkit-radial-gradient(top right, rgba(1, 1, 1, 1.0), rgba(55, 55, 55, 1.0));
+	background: -moz-radial-gradient(top right, rgba(1, 1, 1, 1.0), rgba(55, 55, 55, 1.0));
+	background: radial-gradient(to bottom left, rgba(1, 1, 1, 1.0), rgba(55, 55, 55, 1.0));
+}
+.my-sites__card__back__link{
+	font-family: 'Lucida Console', arial;
+	display: block;
+	width: fit-content;
+	font-weight: 500;
+	margin: auto;
+}
+.my-sites__card__back__content {
+	height: 70%;
+	color: white;
+	font-family: 'Lucida Console', arial;
+	font-weight: 500;
+}
+.my-sites__card__back__content__time {
+	position: absolute;
+	bottom: 10px;
+	color: gray;
+	font-size: 14px;
+}
+.my-sites__card__img:hover {
+	transform: translateX(0px);
+}
+.my-sites__card[active] .my-sites__card__img{
+	transform: translate(0%,-93%) scale(0.8);
+	box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.9);
 }
 /* end of block-3 styles */
 /* adaptive */
