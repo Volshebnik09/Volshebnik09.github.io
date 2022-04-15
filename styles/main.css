@@ -354,7 +354,7 @@ body {
 
 	background: black;
 	transition: .3s;
-	box-shadow: 0px 0px 100px 2px rgba(255,255,255,0.09);
+	box-shadow: 0px 0px 100px 2px rgba(255,255,255,0.01);
 }
 .my-sites__card__img{
 	position: relative;
@@ -367,9 +367,6 @@ body {
 }
 .my-sites__card__img img {
 	width: 100%;
-}
-.my-sites__card:hover {
-	box-shadow:0px 0px 100px 2px rgba(255,255,255,0.14);
 }
 .my-sites__card__back{
 	position: absolute;
@@ -406,9 +403,14 @@ body {
 .my-sites__card__img:hover {
 	transform: translateX(0px);
 }
+.my-sites__card[active] {
+	z-index: 9000;
+	transition: box-shadow 0.7s;
+	box-shadow: 0px 0px 20px 4000px rgba(0,0,0,0.8);
+}
 .my-sites__card[active] .my-sites__card__img{
 	transform: translate(0%,-93%) scale(0.8);
-	box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.9);
+	box-shadow: 2px 2px 20px 0px rgba(0,0,0,1);
 }
 /* end of block-3 styles */
 /* adaptive */
