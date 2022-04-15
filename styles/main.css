@@ -410,7 +410,7 @@ body {
 }
 .my-sites__card[active] .my-sites__card__img{
 	transform: translate(0%,-93%) scale(0.8);
-	box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.8);
+	box-shadow: 2px 2px 20px 0px rgba(0,0,0,1);
 
 }
 /* end of block-3 styles */
