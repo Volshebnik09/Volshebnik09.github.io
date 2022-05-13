@@ -20,3 +20,17 @@ a {
 li {
     list-style: none;
 }
+.container {
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 15px;
+}
+.title {
+    @include H1;
+}
+html,body {
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+}

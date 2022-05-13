@@ -1,3 +1,28 @@
 header.header
-    .container.header__container
+    .header__top
+        span.header__position 1
+        span.header__position 2
+        span.header__position 3
+        span.header__position 4
+        span.header__position 5
+        span.header__position 6
+    nav.header__titles 
+        ul
+            li
+                a.header__title(href="#") top
+            li 
+                a.header__title(href="#") about
+            li 
+                a.header__title(href="#") projects
+    .header__bottom
+        a.header__link(href="#") 
+            include ../includes/vk.svg
+        a.header__link(href="#")
+            include ../includes/github.svg
+        a.header__link(href="#")
+            include ../includes/telegram.svg
+        a.header__link(href="#")
+            include ../includes/codewars.svg
+
         
+    
