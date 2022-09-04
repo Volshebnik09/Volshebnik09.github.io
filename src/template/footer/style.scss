@@ -1,0 +1,30 @@
+.footer{
+  min-height: 80px;
+  background: rgba(52, 169, 187, 0.6);
+  display: flex;
+  align-items: center;
+justify-content: center;
+  padding: 22px 50px;
+  position: relative;
+  margin-top: 200px;
+  a{
+    position: absolute;
+    left: 20px;
+    top:50%;
+    transform: translateY(-40%);
+
+  }
+  p{
+    margin: 0;
+    font-family: 'Jost', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    /* identical to box height, or 100% */
+    width: fit-content;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 40px;
+  }
+}

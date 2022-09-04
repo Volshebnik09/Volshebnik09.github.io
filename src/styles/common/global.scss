@@ -1,36 +1,37 @@
 *, *::before, *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
+  vertical-align: top;
+  &[alt=''][title='']{
+    display: none;
+  }
 }
 
 a {
-    text-decoration: none;
-}
-li {
-    list-style: none;
+  text-decoration: none;
 }
 .container {
-    margin: auto;
-    max-width: 1200px;
-    width: 100%;
-    padding: 15px;
+  max-width: 1090px;
+  margin: auto;
+  padding: 0 15px;
 }
-.title {
-    @include H1;
+section {
+  //min-width:480px;
 }
-html,body {
-    &::-webkit-scrollbar {
-        width: 0px;
-    }
+li {
+  list-style: none;
 }
