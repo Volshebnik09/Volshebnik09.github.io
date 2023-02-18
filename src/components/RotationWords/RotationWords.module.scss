@@ -1,0 +1,50 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.currentLetters {
+  display: inline-block;
+  font-size: 0;
+  textPath{
+    @include spanFont();
+    font-size: $pFontSize;
+    fill: $mainTextColor;
+    letter-spacing: 2px;
+    font-weight: bold;
+    animation: infinite blink linear;
+
+  }
+  animation: infinite rotate linear;
+}
+
+@keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  10% {
+  }
+  40% {
+  }
+  60% {
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

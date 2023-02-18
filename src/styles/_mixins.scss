@@ -1,0 +1,25 @@
+@import "variables";
+
+@mixin spanFont{
+  font-family: Philosopher, sans-serif;
+  font-size: inherit;
+  color: $mainTextColor;
+}
+
+@mixin h1 {
+  font-family: Philosopher, sans-serif;
+  font-size: $h1FontSize;
+  color: $mainTextColor;
+}
+
+@mixin p {
+  font-family: Philosopher, sans-serif;
+  font-size: $pFontSize;
+  color: $mainTextColor;
+}
+
+@mixin span {
+  font-family: Philosopher, sans-serif;
+  font-size: inherit;
+  color: $mainTextColor;
+}

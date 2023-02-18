@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "styles/fonts";
+@import "styles/variables";
+@import "styles/mixins";
+
+body {
+  background: $mainBgColor;
+}
+
+li {
+  list-style: none;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+h1 {
+  @include h1();
+}
+p{
+  @include p();
+}
+span {
+  @include span();
+}
+code {
+  padding: 0 10px;
+  border: $textborder 1px solid;
+  background: $textBgColor;
+  border-radius: 5px;
+}

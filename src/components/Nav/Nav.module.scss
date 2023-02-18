@@ -1,0 +1,38 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.nav{
+  padding: 20px 0 10px;
+  ul{
+    display: flex;
+    gap: 0 20px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.nav__item{
+  text-decoration: none;
+  @include spanFont();
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 2px;
+    opacity: 0;
+    width: 100%;
+    transform: scaleX(0.2);
+    background: $mainTextColor;
+    transform-origin: 50% 50%;
+    transition: 0.4s;
+  }
+  &:hover{
+    &:after {
+      opacity: 1;
+      bottom: -6px;
+      transform: scaleX(1);
+    }
+  }
+}
